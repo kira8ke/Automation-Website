@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Project · n8n Automation – Gloria Wanyaga</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/logo.svg">
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.svg" alt="" class="brand__logo" />
+      <span class="brand__text">Gloria Wanyaga · n8n</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html#projects" class="nav__link">All Projects</a>
+      <a href="index.html#contact" class="nav__link nav__cta">Hire Me</a>
+    </nav>
+  </header>
+
+  <aside class="floating">
+    <a class="floating__btn" href="mailto:wanyagagloria43@gmail.com" title="Email">✉️</a>
+    <a class="floating__btn" href="tel:+254743033208" title="Phone">📞</a>
+    <a class="floating__btn" href="https://www.linkedin.com/in/gloria-wanyaga" target="_blank" rel="noreferrer" title="LinkedIn">in</a>
+  </aside>
+
+  <main class="section">
+    <div class="container">
+      <div id="projectHead" class="project-head">
+        <!-- JS will inject title + tags -->
+      </div>
+
+      <div class="project-body">
+        <div class="project-media">
+          <img id="projectImage" src="assets/placeholder.png" alt="" class="project-media__img" />
+        </div>
+
+        <div class="project-content">
+          <h3>Problem</h3>
+          <p id="projectProblem" class="project__text"></p>
+
+          <h3>How it works (Flow)</h3>
+          <ol id="projectFlow" class="flow"></ol>
+
+          <h3>Nodes / Tools</h3>
+          <ul id="projectNodes" class="tags"></ul>
+
+          <h3>Impact</h3>
+          <p id="projectImpact" class="project__text"></p>
+
+          <div class="project-links">
+            <a id="repoLink" class="btn btn--primary" href="#" target="_blank" rel="noreferrer">View on GitHub</a>
+            <a id="demoLink" class="btn btn--ghost" href="#" target="_blank" rel="noreferrer">Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <a class="project-back" href="index.html#projects">← Back to all projects</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> Gloria Wanyaga</span>
+      <a class="footer__link" href="https://wanyaga.netlify.app" target="_blank" rel="noreferrer">Back to Portfolio</a>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/project.js"></script>
+</body>
+</html>

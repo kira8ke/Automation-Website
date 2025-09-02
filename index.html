@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gloria Wanyaga · n8n Automation Projects</title>
+  <meta name="description" content="Real-world n8n automation projects by Gloria Wanyaga. Streamlined workflows, API integrations, and business value." />
+  <link rel="preload" href="css/styles.css" as="style">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/logo.svg">
+</head>
+<body>
+  <!-- Fixed header -->
+  <header class="header">
+    <a class="brand" href="#">
+      <img src="assets/logo.svg" alt="" class="brand__logo" />
+      <span class="brand__text">Gloria Wanyaga · n8n</span>
+    </a>
+    <nav class="nav">
+      <a href="#projects" class="nav__link">Projects</a>
+      <a href="#about" class="nav__link">About</a>
+      <a href="#contact" class="nav__link nav__cta">Hire Me</a>
+    </nav>
+  </header>
+
+  <!-- Floating contacts (right) -->
+  <aside class="floating">
+    <a class="floating__btn" href="mailto:wanyagagloria43@gmail.com" title="Email">✉️</a>
+    <a class="floating__btn" href="tel:+254743033208" title="Phone">📞</a>
+    <a class="floating__btn" href="https://www.linkedin.com/in/gloria-wanyaga" target="_blank" rel="noreferrer" title="LinkedIn">in</a>
+  </aside>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero__wrap">
+      <h1 class="hero__title">
+        Automations that <span class="g-cyan">save time</span> & <span class="g-blue">drive results</span>
+      </h1>
+      <p class="hero__subtitle">
+        I design and build <strong>n8n</strong> workflows that streamline operations, connect tools,
+        and eliminate repetitive work. If you want reliability, clarity, and measurable impact — you're in the right place.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#projects">View Projects</a>
+        <a class="btn btn--ghost" href="#contact">Start an Automation</a>
+      </div>
+      <ul class="hero__badges">
+        <li>Reliable</li><li>Scalable</li><li>Ready to deploy</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section__head">
+        <div>
+          <h2 class="section__title">Projects</h2>
+          <p class="section__subtitle">Real n8n automations with impact. Click any card to view details.</p>
+        </div>
+        <div class="filters">
+          <div class="search">
+            <input id="searchInput" class="search__input" type="text" placeholder="Search projects..." />
+          </div>
+          <select id="filterSelect" class="filter">
+            <option value="all">All Tags</option>
+            <option value="api">api</option>
+            <option value="email">email</option>
+            <option value="crm">crm</option>
+            <option value="data">data</option>
+            <option value="sheets">sheets</option>
+            <option value="dashboard">dashboard</option>
+            <option value="cron">cron</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="projectsGrid" class="grid"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section__title">About</h2>
+      <p class="about__text">
+        I’m Gloria Wanyaga — a Computer Science student and DevOps/automation enthusiast.
+        I build n8n workflows that remove friction and create measurable value. From API
+        integrations and data pipelines to reminders and CRM automations, I focus on
+        reliability, clarity, and results.
+      </p>
+      <p class="about__text">
+        If you have a manual process that keeps stealing hours from your team, I’ll design a clean,
+        maintainable workflow that gives that time back.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container contact">
+      <h2 class="section__title">Let’s work together</h2>
+      <p class="section__subtitle">Interested in an automation or a collaboration? Reach out:</p>
+      <div class="contact__links">
+        <a class="btn btn--primary" href="mailto:wanyagagloria43@gmail.com">Email Me</a>
+        <a class="btn btn--ghost" href="https://www.linkedin.com/in/gloria-wanyaga" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn btn--ghost" href="tel:+254743033208">Call</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> Gloria Wanyaga</span>
+      <a class="footer__link" href="https://wanyaga.netlify.app" target="_blank" rel="noreferrer">Back to Portfolio</a>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

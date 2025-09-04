@@ -1,7 +1,6 @@
 (function () {
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
-
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
@@ -14,11 +13,11 @@
     return;
   }
 
-  // Head
+  // Head (title + tags)
   const head = document.getElementById("projectHead");
   head.innerHTML = `
-    <h1 class="project-title">${project.title}</h1>
-    <ul class="tags">${project.tags.map(t => `<li class="tag">${t}</li>`).join("")}</ul>
+    <h1 class="project-title">${escapeHtml(project.title)}</h1>
+    <ul class="tags">${project.tags.map(t => `<li class="tag">${escapeHtml(t)}</li>`).join("")}</ul>
   `;
 
   // Media
@@ -26,21 +25,29 @@
   img.src = project.image || "assets/placeholder.png";
   img.alt = `${project.title} screenshot`;
 
-  // Copy
-  document.getElementById("projectProblem").textContent = project.problem;
-  document.getElementById("projectImpact").textContent = project.impact;
+  // Text fields
+  document.getElementById("projectProblem").textContent = project.problem || "";
+  document.getElementById("projectImpact").textContent = project.impact || "";
 
   // Flow
   const flowEl = document.getElementById("projectFlow");
-  flowEl.innerHTML = project.flow.map(step => `<li>${step}</li>`).join("");
+  flowEl.innerHTML = project.flow.map(step => `<li>${escapeHtml(step)}</li>`).join("");
 
   // Nodes
   const nodesEl = document.getElementById("projectNodes");
-  nodesEl.innerHTML = project.nodes.map(n => `<li class="tag">${n}</li>`).join("");
+  nodesEl.innerHTML = (project.nodes || []).map(n => `<li class="tag">${escapeHtml(n)}</li>`).join("");
 
   // Links
   const repoLink = document.getElementById("repoLink");
   const demoLink = document.getElementById("demoLink");
-  repoLink.href = project.links?.repo || "#";
-  demoLink.href = project.links?.demo || "#";
+  repoLink.href = (project.links && project.links.repo) ? project.links.repo : "#";
+  demoLink.href = (project.links && project.links.demo) ? project.links.demo : "#";
+
+  // small helper to avoid injecting raw HTML accidentally
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+  }
 })();

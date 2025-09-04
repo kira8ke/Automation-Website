@@ -13,8 +13,8 @@ window.PROJECTS = [
     nodes: ["Cron","HTTP Request","Function","Email","Telegram"],
     impact: "Automates delivery of daily content and increases engagement.",
     tags: ["api","messaging","cron"],
-    image: "assets/placeholder.png",
-    links: { repo: "https://github.com/youruser/n8n-automation-projects/tree/main/devotional-sender", demo: "#" }
+    image: "assets/images/Bible n8n workflow.PNG",
+    links: { repo: "https://github.com/kira8ke/Daily-Inspiration-n8n-workflow.git", demo: "#" }
   },
   {
     id: "client-reminders",
